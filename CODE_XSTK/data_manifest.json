@@ -1,0 +1,99 @@
+{
+  "source_file": "hourly_cleaned_wide.csv",
+  "sha256": "9363fc3fa051d902e8aef7949dc4a57aedcfddd1166e27f21d6b647f022924cd",
+  "data_date": "2026-10-20",
+  "source_time_span": [
+    "1980-01-01 00:00",
+    "2025-12-31 23:00"
+  ],
+  "calendar_hours": 403248,
+  "daily_rows_1985_2025": 14975,
+  "day_definition": "calendar labels in supplied file; no timezone conversion",
+  "unit": "original unit; centimetres not independently confirmed",
+  "criterion": "all 24 hourly values required for mean/min/max/range",
+  "stations": {
+    "BenLuc": {
+      "pool_valid_days": 7608,
+      "reference_valid_days": 5478
+    },
+    "BienHoa": {
+      "pool_valid_days": 7608,
+      "reference_valid_days": 5478
+    },
+    "PhuAn": {
+      "pool_valid_days": 7608,
+      "reference_valid_days": 5478
+    },
+    "VungTau": {
+      "pool_valid_days": 7670,
+      "reference_valid_days": 5478
+    },
+    "ThuDau1": {
+      "pool_valid_days": 7607,
+      "reference_valid_days": 5478
+    },
+    "NhaBe": {
+      "pool_valid_days": 7424,
+      "reference_valid_days": 5478
+    },
+    "TanAn": {
+      "pool_valid_days": 7608,
+      "reference_valid_days": 5478
+    }
+  },
+  "all7_pool_complete_days": 7423,
+  "notes": [
+    "No interpolation",
+    "Missing values are blank in daily CSV",
+    "The Z suffix of the supplied cleaned file is not independent evidence of the original observing timezone"
+  ],
+  "statistical_frame": [
+    "2000-01-01",
+    "2020-12-31"
+  ],
+  "reference": [
+    "1985-01-01",
+    "1999-12-31"
+  ],
+  "train": [
+    "1985-01-01",
+    "2015-12-31"
+  ],
+  "validation": [
+    "2016-01-01",
+    "2020-12-31"
+  ],
+  "test": [
+    "2021-01-01",
+    "2025-12-31"
+  ],
+  "manifest_updated": "2026-10-25",
+  "pool_definition": "pool_valid_days and all7_pool_complete_days refer to statistical_frame, 2000-2020 inclusive; counts are before sampling with replacement",
+  "daily_columns": {
+    "date": "Calendar date, YYYY-MM-DD",
+    "<station>_n_valid": "Number of valid hourly observations, 0-24",
+    "<station>_mean": "Arithmetic mean of 24 valid hourly observations",
+    "<station>_min": "Minimum of 24 valid hourly observations",
+    "<station>_max": "Maximum of 24 valid hourly observations; not a continuous-time maximum",
+    "<station>_range": "max minus min; derived metrics are blank unless n_valid=24"
+  },
+  "station_names": {
+    "BenLuc": "Bến Lức",
+    "BienHoa": "Biên Hòa",
+    "PhuAn": "Phú An",
+    "VungTau": "Vũng Tàu",
+    "ThuDau1": "Thủ Dầu Một",
+    "NhaBe": "Nhà Bè",
+    "TanAn": "Tân An"
+  },
+  "files": {
+    "hourly_cleaned_wide.csv": {
+      "sha256": "9363fc3fa051d902e8aef7949dc4a57aedcfddd1166e27f21d6b647f022924cd",
+      "rows": 403248
+    },
+    "daily_7stations_1985_2025.csv": {
+      "sha256": "158fce0694e76a06791c3f4c3f3e85b95ae4bf1a410578f0c82c698203f48801",
+      "rows": 14975
+    }
+  }
+}
